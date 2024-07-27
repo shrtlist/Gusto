@@ -14,6 +14,7 @@ class LunchScheduleViewModel: ObservableObject {
     private let lunchMenuDataSource = LunchMenuDataSource()
 
     func fetchLunchMenu() async {
+        weeklyMenus.removeAll()
         let apiResult = await lunchMenuDataSource.getLunchMenu()
 
         for (index, menuItems) in apiResult.enumerated() {
