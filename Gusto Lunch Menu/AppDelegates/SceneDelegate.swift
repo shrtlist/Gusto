@@ -26,9 +26,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
      * Below are two options that can be used as a rootViewController
      * Uncomment one and remove the other & the default UIViewController being used to appease the compiler
      */
-    let root = UIViewController()
+    //    let root = UIViewController()
     //    let root = MainUIKitViewController()
-    //    let root = MainSwiftUIHostController()
+    let root = MainSwiftUIHostController()
 
     window.rootViewController = root
     self.window = window

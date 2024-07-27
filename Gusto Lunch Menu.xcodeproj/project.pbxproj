@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C997F0E2C54096300F7E373 /* LunchScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C997F0D2C54096300F7E373 /* LunchScheduleViewModel.swift */; };
+		1C997F112C546CE300F7E373 /* WeeklyMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C997F102C546CE300F7E373 /* WeeklyMenu.swift */; };
 		3652D24F2C3F608F00C22394 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3652D24E2C3F608F00C22394 /* ContentView.swift */; };
 		3652D2512C3F614B00C22394 /* MainSwiftUIHostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3652D2502C3F614B00C22394 /* MainSwiftUIHostController.swift */; };
 		C3038F9C2859360200909FA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3038F9B2859360200909FA5 /* AppDelegate.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C997F0D2C54096300F7E373 /* LunchScheduleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunchScheduleViewModel.swift; sourceTree = "<group>"; };
+		1C997F102C546CE300F7E373 /* WeeklyMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyMenu.swift; sourceTree = "<group>"; };
 		3652D24E2C3F608F00C22394 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3652D2502C3F614B00C22394 /* MainSwiftUIHostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSwiftUIHostController.swift; sourceTree = "<group>"; };
 		C3038F982859360200909FA5 /* Gusto Lunch Menu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gusto Lunch Menu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C997F0F2C546C6C00F7E373 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1C997F0D2C54096300F7E373 /* LunchScheduleViewModel.swift */,
+				1C997F102C546CE300F7E373 /* WeeklyMenu.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C3038F8F2859360200909FA5 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +119,7 @@
 		C3038F9A2859360200909FA5 /* Gusto Lunch Menu */ = {
 			isa = PBXGroup;
 			children = (
+				1C997F0F2C546C6C00F7E373 /* Model */,
 				C3038FD02859574B00909FA5 /* Data */,
 				C3038FCF285956F300909FA5 /* AppDelegates */,
 				3652D24E2C3F608F00C22394 /* ContentView.swift */,
@@ -288,7 +302,9 @@
 				3652D24F2C3F608F00C22394 /* ContentView.swift in Sources */,
 				C3038F9C2859360200909FA5 /* AppDelegate.swift in Sources */,
 				C3038FCC285936C400909FA5 /* LunchMenuDataSource.swift in Sources */,
+				1C997F112C546CE300F7E373 /* WeeklyMenu.swift in Sources */,
 				C3038F9E2859360200909FA5 /* SceneDelegate.swift in Sources */,
+				1C997F0E2C54096300F7E373 /* LunchScheduleViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
