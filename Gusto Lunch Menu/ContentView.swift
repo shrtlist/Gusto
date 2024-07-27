@@ -12,16 +12,25 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            List(viewModel.weeklyMenus, id: \.id) { weeklyMenu in
-                Section(header: Text("Week \(weeklyMenu.id + 1)")) {
-                    ForEach(weeklyMenu.menuItems, id: \.self) { menuItem in
-                        VStack(alignment: .leading) {
-                            Text(menuItem)
+            ZStack {
+                if viewModel.isFetching {
+                    ProgressView("Fetching...")
+                } else {
+                    List(viewModel.weeklyMenus, id: \.id) { weeklyMenu in
+                        Section(header: Text("Week \(weeklyMenu.id)")) {
+                            ForEach(weeklyMenu.menuItems, id: \.self) { menuItem in
+                                VStack(alignment: .leading) {
+                                    Text(menuItem)
+                                }
+                            }
                         }
+                    }
+                    .listStyle(.insetGrouped)
+                    .refreshable {
+                        await viewModel.fetchLunchMenu()
                     }
                 }
             }
-            .listStyle(.insetGrouped)
             .navigationTitle("Rotating Lunch Schedule")
             .navigationBarTitleDisplayMode(.inline)
         }
