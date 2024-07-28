@@ -22,9 +22,9 @@ enum Weekday: Int {
     var asString : String {
         var resource = ""
         switch self {
-        case .MONDAY: resource =  "Monday"
-        case .TUESDAY : resource =  "Tuesday"
-        case .WEDNESDAY:  resource =  "Wednesday"
+        case .MONDAY: resource = "Monday"
+        case .TUESDAY : resource = "Tuesday"
+        case .WEDNESDAY: resource = "Wednesday"
         case .THURSDAY: resource = "Thursday"
         case .FRIDAY: resource = "Friday"
         }
