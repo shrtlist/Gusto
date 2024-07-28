@@ -21,8 +21,18 @@ class LunchScheduleViewModel: ObservableObject {
 
         let apiResult = await lunchMenuDataSource.getLunchMenu()
 
-        for (index, menuItems) in apiResult.enumerated() {
+        for (index, menuItemNames) in apiResult.enumerated() {
             let weekIndex = index + 1
+
+            var menuItems = [MenuItem]()
+
+            for (index, name) in menuItemNames.enumerated() {
+                guard let weekDay = Weekday(rawValue: index) else { return }
+
+                let menuItem = MenuItem(weekday: weekDay, name: name)
+                menuItems.append(menuItem)
+            }
+
             weeklyMenus.append(WeeklyMenu(id: weekIndex, menuItems: menuItems))
         }
 
