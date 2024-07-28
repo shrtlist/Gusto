@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C13B7552C55ED4A005538BF /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C13B7542C55ED4A005538BF /* MenuItem.swift */; };
 		1C997F0E2C54096300F7E373 /* LunchScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C997F0D2C54096300F7E373 /* LunchScheduleViewModel.swift */; };
 		1C997F112C546CE300F7E373 /* WeeklyMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C997F102C546CE300F7E373 /* WeeklyMenu.swift */; };
 		3652D24F2C3F608F00C22394 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3652D24E2C3F608F00C22394 /* ContentView.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C13B7542C55ED4A005538BF /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		1C997F0D2C54096300F7E373 /* LunchScheduleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunchScheduleViewModel.swift; sourceTree = "<group>"; };
 		1C997F102C546CE300F7E373 /* WeeklyMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyMenu.swift; sourceTree = "<group>"; };
 		3652D24E2C3F608F00C22394 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			children = (
 				1C997F0D2C54096300F7E373 /* LunchScheduleViewModel.swift */,
 				1C997F102C546CE300F7E373 /* WeeklyMenu.swift */,
+				1C13B7542C55ED4A005538BF /* MenuItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				C3038F9C2859360200909FA5 /* AppDelegate.swift in Sources */,
 				C3038FCC285936C400909FA5 /* LunchMenuDataSource.swift in Sources */,
 				1C997F112C546CE300F7E373 /* WeeklyMenu.swift in Sources */,
+				1C13B7552C55ED4A005538BF /* MenuItem.swift in Sources */,
 				C3038F9E2859360200909FA5 /* SceneDelegate.swift in Sources */,
 				1C997F0E2C54096300F7E373 /* LunchScheduleViewModel.swift in Sources */,
 			);
