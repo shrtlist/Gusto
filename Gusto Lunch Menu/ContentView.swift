@@ -30,6 +30,10 @@ struct ContentView: View {
                     .listStyle(.insetGrouped)
                     .refreshable {
                         await viewModel.fetchLunchMenu()
+                    }.overlay {
+                        if viewModel.weeklyMenus.isEmpty {
+                            ContentUnavailableView.init("No results", systemImage: "fork.knife.circle")
+                        }
                     }
                 }
             }
