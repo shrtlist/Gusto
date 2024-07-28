@@ -35,6 +35,11 @@ struct ContentView: View {
             }
             .navigationTitle("Rotating Lunch Schedule")
             .navigationBarTitleDisplayMode(.inline)
+            .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification, object: nil)) { _ in
+                Task {
+                    await viewModel.fetchLunchMenu()
+                }
+            }
         }
         .onAppear {
             Task {
