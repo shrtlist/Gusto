@@ -8,22 +8,21 @@
 import Foundation
 
 @MainActor
-class LunchScheduleViewModel: ObservableObject {
-    @Published var weeklyMenus = [WeeklyMenu]()
-    @Published var isFetching = true
+@Observable class LunchScheduleViewModel {
+    var weeklyMenus = [WeeklyMenu]()
+    var isFetching = false
 
     private let lunchMenuDataSource = LunchMenuDataSource()
 
     func fetchLunchMenu() async {
-        weeklyMenus.removeAll()
-
+        guard !isFetching else { return }
         isFetching = true
+
+        weeklyMenus.removeAll()
 
         let apiResult = await lunchMenuDataSource.getLunchMenu()
 
         for (index, menuItemNames) in apiResult.enumerated() {
-            let weekIndex = index + 1
-
             var menuItems = [MenuItem]()
 
             for (index, name) in menuItemNames.enumerated() {
@@ -33,7 +32,7 @@ class LunchScheduleViewModel: ObservableObject {
                 menuItems.append(menuItem)
             }
 
-            weeklyMenus.append(WeeklyMenu(id: weekIndex, menuItems: menuItems))
+            weeklyMenus.append(WeeklyMenu(id: index, menuItems: menuItems))
         }
 
         isFetching = false
