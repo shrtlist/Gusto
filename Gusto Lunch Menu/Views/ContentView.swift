@@ -12,9 +12,13 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            ZStack {
+            Group {
                 if viewModel.isFetching {
                     ProgressView("Fetching...")
+                } else if viewModel.weeklyMenus.isEmpty {
+                    ScrollView {
+                        ContentUnavailableView.init("No results", systemImage: "fork.knife.circle")
+                    }
                 } else {
                     List(viewModel.weeklyMenus, id: \.id) { weeklyMenu in
                         Section(header: Text("Week \(weeklyMenu.id)")) {
@@ -30,10 +34,6 @@ struct ContentView: View {
                     .listStyle(.insetGrouped)
                     .refreshable {
                         await viewModel.fetchLunchMenu()
-                    }.overlay {
-                        if viewModel.weeklyMenus.isEmpty {
-                            ContentUnavailableView.init("No results", systemImage: "fork.knife.circle")
-                        }
                     }
                 }
             }
