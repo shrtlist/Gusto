@@ -88,10 +88,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1C997F0F2C546C6C00F7E373 /* Model */ = {
+		1C1BB5CD2D3372FA00562892 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				1C997F0D2C54096300F7E373 /* LunchScheduleViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1C1BB5CE2D33731300562892 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3652D24E2C3F608F00C22394 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1C997F0F2C546C6C00F7E373 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				1C997F102C546CE300F7E373 /* WeeklyMenu.swift */,
 				1C13B7542C55ED4A005538BF /* MenuItem.swift */,
 			);
@@ -122,10 +137,11 @@
 		C3038F9A2859360200909FA5 /* Gusto Lunch Menu */ = {
 			isa = PBXGroup;
 			children = (
-				1C997F0F2C546C6C00F7E373 /* Model */,
-				C3038FD02859574B00909FA5 /* Data */,
 				C3038FCF285956F300909FA5 /* AppDelegates */,
-				3652D24E2C3F608F00C22394 /* ContentView.swift */,
+				C3038FD02859574B00909FA5 /* Data */,
+				1C997F0F2C546C6C00F7E373 /* Model */,
+				1C1BB5CD2D3372FA00562892 /* ViewModel */,
+				1C1BB5CE2D33731300562892 /* Views */,
 				C3038F9F2859360200909FA5 /* MainUIKitViewController.swift */,
 				3652D2502C3F614B00C22394 /* MainSwiftUIHostController.swift */,
 				C3038FA42859360400909FA5 /* Assets.xcassets */,
