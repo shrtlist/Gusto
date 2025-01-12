@@ -23,11 +23,7 @@ struct ContentView: View {
                     List(viewModel.weeklyMenus, id: \.id) { weeklyMenu in
                         Section(header: Text("Week \(weeklyMenu.id)")) {
                             ForEach(weeklyMenu.menuItems, id: \.weekday) { menuItem in
-                                HStack {
-                                    Text(menuItem.weekday.asString)
-                                    Spacer()
-                                    Text(menuItem.name)
-                                }
+                                MenuItemView(menuItem: menuItem)
                             }
                         }
                     }
