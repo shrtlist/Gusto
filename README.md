@@ -1,22 +1,14 @@
-# Gusto Lunch Menu
+# Lunch Menu
 
-Welcome to the Gusto Technical Phone Assessment! This project is a starting point for the below problem.
-
-## The Project
-
-This project will serve as a starting point in the interview process. Once this project has been evaluated by our engineering team, you may be invited for a full panel interview with various members of the team. At the full panel interview, we'll review this project with you and ask you to enhance it with a new set of requirements. 
-
-As you tackle this problem, keep in mind we'll be looking for the following:
+As you tackle this problem, keep in mind the following:
 
 * Code structure and software architecture principles
 * Ability to navigate ambiguous requirements
 * Your unique strengths as a software engineer
 
-At the end of this session, make sure you push what you've completed and your interview has access to your repo.
-
 ## The Problem
 
-At Gusto, we really enjoy our catered lunches. We use a rotating schedule for the lunch menu, but it has been tricky for us to keep track of it. To help us plan our week, we'd like an app that displays the lunch schedule on a calendar. You'll find the raw lunch schedule data below.
+We really enjoy our catered lunches. We use a rotating schedule for the lunch menu, but it has been tricky for us to keep track of it. To help us plan our week, we'd like an app that displays the lunch schedule on a calendar. You'll find the raw lunch schedule data below.
 
 ### Rotating Lunch Schedule
 
